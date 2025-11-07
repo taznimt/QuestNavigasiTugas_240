@@ -9,6 +9,9 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.questnavigasi.view.DaftarPeserta
+import com.example.questnavigasi.view.FormDataDiri
+import com.example.questnavigasi.view.HomePage
 
 enum class Navigasi {
     Beranda,
@@ -28,7 +31,7 @@ fun HomeApp(
             modifier = Modifier.padding(isiRuang)
         ) {
             composable(route = Navigasi.Beranda.name) {
-                Homepage(
+                HomePage(
                     OnSubmitBtnClick = {
                         navController.navigate(Navigasi.List.name)
                     }
